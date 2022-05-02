@@ -5,8 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Create Person</title>
+
 </head>
 <body>
+<h2>Person details</h2>
 <form action=" " method="post">
 <pre>
 	Number: <input type="text" id="number" placeholder="enter mobile number">
