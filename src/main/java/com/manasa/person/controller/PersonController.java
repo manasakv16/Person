@@ -29,7 +29,13 @@ public class PersonController {
 		modelMap.addAttribute("msg",msg);
 		return "CreatePerson";
 	}
-
+	
+	@RequestMapping("/displayPerson")
+	public String displayPerson(ModelMap modelMap) {
+		List<Person> person = service.getAllPerson();
+		modelMap.addAttribute("person", person);
+		return "displayPerson";
+	}
 	
 	
 	
