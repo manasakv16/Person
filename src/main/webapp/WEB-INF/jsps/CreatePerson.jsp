@@ -9,19 +9,24 @@
 </head>
 <body>
 <h2>Person details</h2>
-<form action=" " method="post">
+<form action="savedPerson" method="post">
 <pre>
-	Number: <input type="text" id="number" placeholder="enter mobile number">
-	Name: <input type="text" id="name" placeholder="enter your name">
-	Age: <Input type="number" id="age" placeholder="enter your age">
-	Gender: <input type="text" id="gender" placeholder="enter your gender">
+	Number: <input type="text" name="number" placeholder="enter mobile number"> 
+	Name: <input type="text" name="name" placeholder="enter your name">
+	Gender: <input type="text" name="gender" placeholder="enter your gender">
+	Age: <Input type="number" name="age" placeholder="enter your age">
+	
 	Address:
-		Street: <input type="text" id="street"  placeholder="enter your street">
-		City:	<input type="text" id="city"  placeholder="enter your city">
-		Pin Code: <input type="number" id="pincode"  placeholder="enter your pincode">
+		Street: <input type="text" name="street"  placeholder="enter your street">
+		City:	<input type="text" name="city"  placeholder="enter your city">
+		Pin Code: <input type="number" name="pincode"  placeholder="enter your pincode">
+		<br>
 	<input type="submit" value="save" />
-	<a href="displayPerson">View All</a>
 </pre>
 </form>
+<br>
+${msg}
+<br>
+<a href="displayPerson">View All</a>
 </body>
 </html>
