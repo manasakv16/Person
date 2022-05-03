@@ -29,7 +29,7 @@
 <td>${person.street}</td>
 <td>${person.city}</td>
 <td>${person.pincode}</td>
-<td> <a href="editPerson">edit</a>
+<td> <a href="editPerson?number=${person.number}">edit</a>
 <td> <a href="deletePerson?number=${person.number}">delete</a>
 </tr>
 </c:forEach>							

@@ -55,6 +55,21 @@ public class PersonController {
 		return "displayPerson";
 	}
 	
+	@RequestMapping("/editPerson")
+	public String showUpdate(@RequestParam("number")String number , ModelMap modelMap) {
+		Person person = service.getPersonByNumber(number);
+		modelMap.addAttribute("person", person);
+		return "editPerson";
+	}
+	
+	@RequestMapping("/updPerson")
+	public String updatedPerson(@ModelAttribute("person") Person person, ModelMap modelMap) {
+		Person updatePerson = service.updatePerson(person);
+		List<Person> allPerson = service.getAllPerson();
+		modelMap.addAttribute("person", allPerson);
+		return "displayPerson";
+	}
+	
 	
 	
 }
