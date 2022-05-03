@@ -26,8 +26,8 @@
 <td th:text="${person.city}"></td>
 <td th:text="${person.pincode}"></td>
 
-<td> <a href="editPerson?number=${person.number}">edit</a>
-<td> <a href="deletePerson?number=${person.number}">delete</a>
+<td> <a th:href="@{'editPerson?number='+${person.number}}">edit</a>
+<td> <a th:href="@{'deletePerson?number='+${person.number}}">delete</a>
 </tr>
 							
 

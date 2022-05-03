@@ -9,15 +9,15 @@
 <h2>Person details</h2>
 <form action="updPerson" method="post">
 <pre>
-	Number: <input type="text" name="number" value="${person.number}" Readonly > 
-	Name: <input type="text" name="name"  value="${person.name}">
-	Gender: <input type="text" name="gender" value="${person.gender}" >
-	Age: <Input type="number" name="age" value="${person.age}">
+	Number: <input type="text" name="number" th:value="${person.number}" Readonly > 
+	Name: <input type="text" name="name"  th:value="${person.name}">
+	Gender: <input type="text" name="gender" th:value="${person.gender}" >
+	Age: <Input type="number" name="age" th:value="${person.age}">
 	
 	Address:
-		Street: <input type="text" name="street" value="${person.street}" >
-		City:	<input type="text" name="city" value="${person.city}" >
-		Pin Code: <input type="number" name="pincode" value="${person.pincode}" >
+		Street: <input type="text" name="street" th:value="${person.street}" >
+		City:	<input type="text" name="city" th:value="${person.city}" >
+		Pin Code: <input type="number" name="pincode" th:value="${person.pincode}" >
 		<br>
 	<input type="submit" value="save" />
 </pre>
