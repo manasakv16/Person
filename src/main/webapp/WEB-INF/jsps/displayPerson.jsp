@@ -29,9 +29,8 @@
 <td>${person.street}</td>
 <td>${person.city}</td>
 <td>${person.pincode}</td>
-<td> <a href="createPerson">edit</a>
-<td> <a href="createPerson">delete</a>
-<td> <a href="createPerson">Mark as favourite</a>
+<td> <a href="editPerson">edit</a>
+<td> <a href="deletePerson?number=${person.number}">delete</a>
 </tr>
 </c:forEach>							
 

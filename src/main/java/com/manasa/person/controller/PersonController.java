@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.manasa.person.entities.Person;
 import com.manasa.person.service.PersonService;
@@ -33,6 +34,17 @@ public class PersonController {
 	@RequestMapping("/displayPerson")
 	public String displayPerson(ModelMap modelMap) {
 		List<Person> person = service.getAllPerson();
+		modelMap.addAttribute("person", person);
+		return "displayPerson";
+	}
+	
+	@RequestMapping("deletePerson")
+	public String deletePerson(@RequestParam("number")String number , ModelMap modelMap) {
+		//Person persons=service.getPersonByNumber(number);
+		Person persons = new Person();
+		persons.setNumber(number);
+		service.deletePerson(persons);
+		List<Person> person= service.getAllPerson();
 		modelMap.addAttribute("person", person);
 		return "displayPerson";
 	}
