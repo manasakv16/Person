@@ -26,7 +26,13 @@ public class PersonController {
 	@RequestMapping("/savedPerson")
 	public String savePerson(@ModelAttribute("person") Person person, ModelMap modelMap ) {
 		Person newPerson = service.savePerson(person);
-		String msg="Person saved with name: " +newPerson.getNumber();
+		String msg;
+		if(newPerson.getNumber()!=null) {
+		msg="Person saved with name: " +newPerson.getName() + " and number: " +newPerson.getNumber();
+		}
+		else {
+			msg="Error adding a Person";
+		}
 		modelMap.addAttribute("msg",msg);
 		return "CreatePerson";
 	}
